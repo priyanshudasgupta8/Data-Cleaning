@@ -8,11 +8,6 @@ import pandas as pd
 # OPEN THE URL
 start_url = "https://en.wikipedia.org/wiki/List_of_brightest_stars_and_other_record_stars"
 
-# OPEN THE LINK WITH THE BROWSER
-#browser = webdriver.Chrome(r"C:\Users\Nirvighan\Downloads\chromedriver_win32\chromedriver")
-#browser.get(start_url)
-#time.sleep(10)
-
 page = requests.get(start_url)
 soup = bs(page.text,'html.parser')
 star_table = soup.find('table')
